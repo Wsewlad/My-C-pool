@@ -1,0 +1,5 @@
+Credentials cache: API:5266
+        Principal: vfil@UNIT.UA
+
+  Issued                Expires               Principal
+Jul 24 12:07:22 2017  Jul 24 22:07:22 2017  krbtgt/UNIT.UA@UNIT.UA

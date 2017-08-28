@@ -1,0 +1,4 @@
+dn: uid=vfil,ou=july,ou=2017,ou=people,dc=unit,dc=ua
+changetype: modify
+add: mobile
+mobile: 0979719878
