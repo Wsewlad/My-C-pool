@@ -10,14 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+void	ft_putchar(char c);
 
 void	ft_print_comb(void)
 {
 	int f;
 	int i;
 	int l;
-
+	
+	f = 0;
 	while (f++ <= 7)
 	{
 		i = f;
