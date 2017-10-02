@@ -1,30 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfil <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/07/28 20:26:12 by vfil              #+#    #+#             */
-/*   Updated: 2017/07/28 22:11:30 by vfil             ###   ########.fr       */
+/*   Created: 2017/07/28 20:12:44 by vfil              #+#    #+#             */
+/*   Updated: 2017/07/28 20:24:22 by vfil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int     ft_strlen(char *str);
-
-char	*ft_strrev(char *str)
+int		ft_strlen(char *str)
 {
-	int		i;
-	int		last;
-	char	temp;
+	int i;
 
-	last = ft_strlen(str) - 1;
-	i = -1;
-	while (i++ < last / 2)
-	{
-		temp = str[i];
-		str[i] = str[last - i];
-		str[last - i] = temp;
-	}
-	return (str);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
