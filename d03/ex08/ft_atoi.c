@@ -12,15 +12,28 @@
 
 int		ft_atoi(char *str)
 {
-	int i;
-	int numb;
+	int sum;
+	int if_neg;
+    int i;
 
+	sum = 0;
 	i = 0;
-	numb = 0;
+    if_neg = 1;
+    while (str[i] >= 9 && str[i] <= 32)
+        i++;
+    while (str[i] == '+' && str[i + 1] != '-')
+        i++;
+    if (str[i] != '-' && str[i] < '0' && str[i] > '9')
+        return (0);
+    if (str[i] == '-')
+    {
+        if_neg = -1;
+        i++;
+    }
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		numb = numb * 10 + 'str[i]' - '0';
+		sum = sum * 10 + str[i] - '0';
 		i++;
 	}
-	return (numb);
+	return (sum * if_neg);
 }
