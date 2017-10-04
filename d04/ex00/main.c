@@ -1,0 +1,23 @@
+int     ft_iterative_factorial(int nb);
+void    ft_putnbr(int nb);
+void    ft_putstr(char *str);
+void    ft_putchar(char c);
+int     ft_atoi(char *str);
+
+int     main(int argc, char **argv)
+{
+    if (argc != 2)
+    {
+        ft_putstr("Please, type some number like program argument (0 - 12)\n");
+        return (0);
+    }
+    else
+    {
+        ft_putstr("Your number is: ");
+        ft_putnbr(ft_atoi(argv[1]));
+        ft_putstr("\nYour factorial is: ");
+        ft_putnbr(ft_iterative_factorial(ft_atoi(argv[1])));
+        ft_putchar('\n');
+    }
+    return (0);
+}
