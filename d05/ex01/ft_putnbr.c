@@ -10,44 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
-
-void	ft_putmint(char *min_int)
-{
-	int		i;
-
-	i = 0;
-	ft_putchar(45);
-	while (min_int[i] != '\0')
-	{
-		ft_putchar(min_int[i]);
-		i++;
-	}
-}
+void	ft_putchar(char c);
 
 void	ft_putnbr(int nb)
 {
-	int i;
+	long int i;
+    long int nbl;
 
 	i = 1;
-	if (nb == -2147483648)
-		ft_putmint("2147483648");
-	else
+    nbl = nb;
+	if (nbl < 0)
 	{
-		if (nb < 0)
-		{
-			ft_putchar(45);
-			nb *= -1;
-		}
-		while (nb / i > 9)
-		{
-			i *= 10;
-		}
-		while (i != 0)
-		{
-			ft_putchar(nb / i + 48);
-			nb %= i;
-			i /= 10;
-		}
+		ft_putchar(45);
+		nbl *= -1;
+	}
+	while (nbl / i > 9)
+		i *= 10;
+	while (i != 0)
+	{
+		ft_putchar(nbl / i + 48);
+		nbl %= i;
+		i /= 10;
 	}
 }
